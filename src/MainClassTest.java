@@ -25,5 +25,14 @@ public class MainClassTest extends MainClass {
             Assert.fail("Class number should be more than 45, got " + classNumber);
         }
     }
+
+    @Test
+    public void testGetClassString() {
+        String classString = getClassString();
+        Assert.assertTrue("Class string does not contain 'Hello' or 'hello'",
+                          classString.contains("Hello") || classString.contains("hello"));
+        System.out.println("OK, class string is valid");
+    }
+
 }
 
